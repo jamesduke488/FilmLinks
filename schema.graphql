@@ -1,0 +1,39 @@
+type Query {
+    films: [Film!]!
+}
+
+type Film {
+    id: ID!
+    title: String!
+    description: String
+    releaseDate: String
+    director: Director!
+    genre: String!
+    rating: Float
+    actors: [Actor!]!
+    writers: [Writer!]!
+}
+
+type Director {
+    id: ID!
+    name: String!
+    birthDate: String!
+    nationality: String!
+    films: [Film!]!
+}
+
+type Actor {
+    id: ID!
+    name: String!
+    birthDate: String!
+    nationality: String!
+    films: [Film!]!
+}
+
+type Writer {
+    id: ID!
+    name: String!
+    birthDate: String!
+    nationality: String!
+    films: [Film!]!
+}
