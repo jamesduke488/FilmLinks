@@ -1,5 +1,19 @@
 type Query {
+    film(id: ID!): Film!
     films: [Film!]!
+    director(id: ID!): Director!
+    directors: [Director!]!
+    actor(id: ID!): Actor!
+    actors: [Actor!]!
+    writer(id: ID!): Writer!
+    writers: [Writer!]!
+}
+
+interface Person {
+    id: ID!
+    name: String!
+    dob: String
+    nationality: String
 }
 
 type Film {
@@ -8,32 +22,32 @@ type Film {
     description: String
     releaseDate: String
     director: Director!
-    genre: String!
+    genre: String
     rating: Float
     actors: [Actor!]!
-    writers: [Writer!]!
+    writers: [Writer!]
 }
 
-type Director {
+type Director implements Person {
     id: ID!
     name: String!
-    birthDate: String!
-    nationality: String!
+    dob: String
+    nationality: String
     films: [Film!]!
 }
 
-type Actor {
+type Actor implements Person {
     id: ID!
     name: String!
-    birthDate: String!
-    nationality: String!
+    dob: String
+    nationality: String
     films: [Film!]!
 }
 
-type Writer {
+type Writer implements Person {
     id: ID!
     name: String!
-    birthDate: String!
-    nationality: String!
+    dob: String
+    nationality: String
     films: [Film!]!
 }
