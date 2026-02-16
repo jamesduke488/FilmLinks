@@ -1,8 +1,8 @@
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 
-import { films } from './film_data.js'
-import { directors } from './director_data.js';
+import films from './film_data.js'
+import directors from './director_data.js';
 
 const typeDefs = `
     type Query {

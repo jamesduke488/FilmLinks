@@ -28,6 +28,7 @@ export const films = [
         title: "Interstellar",
         description: "A science fiction movie about a man who travels through space to find a new home for humanity.",
         releaseDate: "2014-11-07",
+        director: "Christopher Nolan",
         directorId: "1"
     },
     {
@@ -35,6 +36,7 @@ export const films = [
         title: "Inception",
         description: "A science fiction movie about a man who travels through space to find a new home for humanity.",
         releaseDate: "2010-07-16",
+        director: "Christopher Nolan",
         directorId: "1"
     },
     {
@@ -42,6 +44,7 @@ export const films = [
         title: "Pulp Fiction",
         description: "A crime movie about a man who becomes a crime lord and fights crime.",
         releaseDate: "1994-10-14",
+        director: "Quentin Tarantino",
         directorId: "2"
     },
     {
@@ -49,6 +52,7 @@ export const films = [
         title: "The Godfather",
         description: "A crime movie about a man who becomes a crime lord and fights crime.",
         releaseDate: "1972-03-24",
+        director: "Francis Ford Coppola",
         directorId: "9"
     },
     {
@@ -56,6 +60,7 @@ export const films = [
         title: "Goodfellas",
         description: "A crime movie about a man who becomes a crime lord and fights crime.",
         releaseDate: "1990-11-23",
+        director: "Martin Scorsese",
         directorId: "3"
     },
     {
@@ -63,6 +68,9 @@ export const films = [
         title: "Gone Girl",
         description: "Nick Dunne discovers that the entire media focus has shifted on him when his wife, Amy Dunne, mysteriously disappears on the day of their fifth wedding anniversary.",
         releaseDate: "2014-10-03",
+        director: "David Fincher",
         directorId: "8"
     }
 ]
+
+export default films
