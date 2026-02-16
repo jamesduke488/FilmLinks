@@ -1,4 +1,3 @@
-
 export const directors = [
     {
         id: "1",
@@ -55,3 +54,5 @@ export const directors = [
         nationality: "American",
     }
 ]
+
+export default directors
