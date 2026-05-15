@@ -1,11 +1,28 @@
 from typing import List
 from fastapi import FastAPI, Depends, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from api.models import Film
 from api.setup_db import SessionLocal, engine, Base
 from api.schema import FilmCreate, FilmReturn
 
 app = FastAPI()
+
+origins = [
+    "http://localhost:5173"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
+
+@app.get('/api/health/')
+def health():
+    return {"status": "ok"}
 
 Base.metadata.create_all(bind=engine)
 

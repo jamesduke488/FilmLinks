@@ -1,8 +1,8 @@
 from sqlalchemy import Column, Integer, String
-from api.setup_db import Base
+from setup_db import Base
 
 class Film(Base):
-    __tablename__ = "films"
+    __tablename__ = "films3"
     film_id = Column(Integer, primary_key=True, index=True)
     title = Column(String(255), nullable=False, index=True)
     director = Column(String(100), nullable=False)
